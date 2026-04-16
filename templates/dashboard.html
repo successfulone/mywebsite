@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='bg.png') }}");
+            background-size: cover;
+            font-family: Arial;
+            margin: 0;
+            color: white;
+        }
+
+        .navbar {
+            background: rgba(0,0,0,0.8);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #facc15;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(0,0,0,0.7);
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background: #1e293b;
+        }
+
+        .coming {
+            color: #bbb;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <span>DELSU CSE Portal</span>
+    <a href="/logout" style="color:white;">Logout</a>
+</div>
+
+<div class="content">
+
+<h2>100 Level - First Semester</h2>
+
+<table>
+<tr>
+<th>Code</th><th>Title</th><th>Unit</th><th>Status</th><th>Lecturer</th>
+</tr>
+
+<tr><td>CHM101</td><td>General Chemistry I</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>COS101</td><td>Problem Solving</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>D/GST103</td><td>DELSU Culture and Ethics</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>EDU101</td><td>Intro to Teaching</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>GST101</td><td>Communication in English</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>GST102</td><td>Philosophy & Logic</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>MTH101</td><td>Algebra & Trigonometry</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>MTH102</td><td>Calculus</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>PHY101</td><td>Mechanics</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>PHY103</td><td>Practical Physics I</td><td>1</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+</table>
+
+<h2>100 Level - Second Semester</h2>
+
+<table>
+<tr>
+<th>Code</th><th>Title</th><th>Unit</th><th>Status</th><th>Lecturer</th>
+</tr>
+
+<tr><td>BIO111</td><td>General Biology II</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>BIO112</td><td>Biology Practical</td><td>1</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>COS111</td><td>Intro to Computer Science</td><td>3</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>COS112</td><td>Computer Lab</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>COS113</td><td>OOP</td><td>3</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>D/GST112</td><td>Everyday Science</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>GST111</td><td>Nigerian People</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>GST113</td><td>Peace Studies</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>PHY111</td><td>Electricity & Magnetism</td><td>2</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+<tr><td>PHY113</td><td>Practical Physics II</td><td>1</td><td>Core</td><td class="coming">Coming Soon</td></tr>
+</table>
+
+</div>
+
+</body>
+</html>
