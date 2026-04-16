@@ -9,23 +9,25 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            color: white;
-            text-align: center;
             font-family: Arial;
             margin: 0;
+            color: white;
         }
 
+        /* NAVBAR */
         .navbar {
             background: rgba(30, 41, 59, 0.9);
-            padding: 15px;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
+            align-items: center;
         }
 
         .logo {
             display: flex;
-            gap: 10px;
             align-items: center;
+            gap: 10px;
+            font-weight: bold;
         }
 
         .logo img {
@@ -34,38 +36,55 @@
         }
 
         .nav-links a {
-            color: white;
             text-decoration: none;
+            color: white;
             background: #38bdf8;
             padding: 8px 15px;
             border-radius: 5px;
         }
 
-        .hero h1 {
-            color: #facc15;
-            margin-top: 80px;
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin: 40px 0;
         }
 
+        .header h1 {
+            color: #facc15;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        }
+
+        /* SECTION */
         .section {
-            background: rgba(0,0,0,0.6);
-            margin: 40px;
+            background: rgba(0,0,0,0.7);
+            margin: 20px;
             padding: 20px;
             border-radius: 10px;
         }
 
-        .level {
-            margin-top: 20px;
+        h2 {
+            color: #facc15;
         }
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            margin: 10px;
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
             padding: 10px;
-            border-radius: 5px;
+            text-align: left;
+        }
+
+        th {
+            background: #1e293b;
         }
 
         .coming {
-            color: #aaa;
+            color: #bbb;
             font-style: italic;
         }
     </style>
@@ -73,6 +92,7 @@
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
     <div class="logo">
         <img src="{{ url_for('static', filename='logo.png') }}">
@@ -84,44 +104,65 @@
     </div>
 </div>
 
-<div class="hero">
+<!-- HEADER -->
+<div class="header">
     <h1>DELSU CSE 25/26</h1>
     <p>Department of Computer Science Education</p>
 </div>
 
+<!-- 100 LEVEL FIRST SEM -->
 <div class="section">
-    <h2>Courses & Levels</h2>
+    <h2>100 Level - First Semester</h2>
 
-    <!-- 100 LEVEL -->
-    <div class="level">
-        <h3>100 Level - First Semester</h3>
+    <table>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Title</th>
+            <th>Lecturer</th>
+        </tr>
 
-        <div class="card">CSC 101 - Introduction to Programming (Dr. Okafor)</div>
-        <div class="card">CSC 102 - Computer Basics (Prof. Adewale)</div>
-        <div class="card">MTH 101 - Algebra (Dr. Musa)</div>
-    </div>
+        <tr>
+            <td>CSC 101</td>
+            <td>Introduction to Programming</td>
+            <td class="coming">Coming Soon</td>
+        </tr>
 
-    <div class="level">
-        <h3>100 Level - Second Semester</h3>
-        <p class="coming">Coming Soon</p>
-    </div>
+        <tr>
+            <td>CSC 102</td>
+            <td>Computer Basics</td>
+            <td class="coming">Coming Soon</td>
+        </tr>
 
-    <!-- 200 LEVEL -->
-    <div class="level">
-        <h3>200 Level - First Semester</h3>
-        <p class="coming">Coming Soon</p>
-    </div>
+        <tr>
+            <td>MTH 101</td>
+            <td>Algebra</td>
+            <td class="coming">Coming Soon</td>
+        </tr>
+    </table>
+</div>
 
-    <div class="level">
-        <h3>200 Level - Second Semester</h3>
-        <p class="coming">Coming Soon</p>
-    </div>
+<!-- 100 LEVEL SECOND SEM -->
+<div class="section">
+    <h2>100 Level - Second Semester</h2>
 
-    <!-- 300 LEVEL -->
-    <div class="level">
-        <h3>300 Level - First Semester</h3>
-        <p class="coming">Coming Soon</p>
-    </div>
+    <p class="coming">Courses will be updated soon.</p>
+</div>
 
-    <div class="level">
-        <h
+<!-- OTHER LEVELS -->
+<div class="section">
+    <h2>200 Level</h2>
+    <p class="coming">Coming Soon</p>
+</div>
+
+<div class="section">
+    <h2>300 Level</h2>
+    <p class="coming">Coming Soon</p>
+</div>
+
+<div class="section">
+    <h2>400 Level</h2>
+    <p class="coming">Coming Soon</p>
+</div>
+
+</body>
+</html>
