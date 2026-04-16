@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
-app.secret_key = "secretkey"
+app.secret_key = "delsu_secret_key"
 
 @app.route("/")
 def home():
@@ -14,7 +14,7 @@ def login():
     if request.method == "POST":
         matric = request.form.get("matric")
 
-        if matric:  # simple check
+        if matric:
             session["user"] = matric
             return redirect("/dashboard")
 
@@ -29,7 +29,7 @@ def dashboard():
 
 @app.route("/logout")
 def logout():
-    session.pop("user", None)
+    session.clear()
     return redirect("/login")
 
 if __name__ == "__main__":

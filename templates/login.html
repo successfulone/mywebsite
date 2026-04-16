@@ -5,50 +5,109 @@
 
     <style>
         body {
-            background-image: url("{{ url_for('static', filename='bg.png') }}");
-            background-size: cover;
-            backdrop-filter: blur(6px);
+            margin: 0;
             font-family: Arial;
-            text-align: center;
             color: white;
         }
 
-        .box {
-            margin-top: 150px;
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("{{ url_for('static', filename='bg.png') }}") center/cover no-repeat;
+            filter: blur(10px);
+            z-index: -2;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             background: rgba(0,0,0,0.7);
+            z-index: -1;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .box {
+            background: rgba(0,0,0,0.75);
             padding: 30px;
-            display: inline-block;
             border-radius: 10px;
+            width: 320px;
+        }
+
+        h1 {
+            color: #facc15;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         input {
+            width: 100%;
             padding: 10px;
-            width: 250px;
-            margin: 10px;
-            border-radius: 5px;
+            margin-top: 15px;
             border: none;
+            border-radius: 5px;
         }
 
         button {
-            padding: 10px 20px;
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
             background: #38bdf8;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+
+        blockquote {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #38bdf8;
+            font-style: italic;
         }
     </style>
 </head>
 
 <body>
 
-<div class="box">
-    <h2>DELSU CSE Portal</h2>
-    <p>Enter your Matric Number</p>
+<div class="background"></div>
+<div class="overlay"></div>
 
-    <form method="POST">
-        <input type="text" name="matric" placeholder="Matric Number" required><br>
-        <button type="submit">Login</button>
-    </form>
+<div class="container">
+    <div class="box">
+
+        <h1>DELSU COMPUTER SCIENCE EDUCATION 25/26 PORTAL</h1>
+
+        <p>
+            Welcome to Delta State University Computer Science Education Portal.
+            Manage your academic activities, courses, and student information in one place.
+        </p>
+
+        <blockquote>
+            "Computer Science Education builds thinkers, problem solvers, and innovators for the digital world."
+        </blockquote>
+
+        <form method="POST">
+            <input type="text" name="matric" placeholder="Enter Matric Number" required>
+            <button type="submit">Login</button>
+        </form>
+
+    </div>
 </div>
 
 </body>
